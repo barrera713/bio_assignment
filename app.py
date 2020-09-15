@@ -41,10 +41,6 @@ while(finish != 'e'):
 
     # We call our validation function on both sequences
     # We break and print error message if there are invalid nucleotides in a sequence
-    # if(validateSeq(s1) != True):
-    #     print("ERROR: Sequence 1 contains invalid nucleotides.")
-    #     break
-
     elif(validateSeq(s1) != True or validateSeq(s2) != True):
         print("ERROR: Sequence contains invalid nucleotides.")
         break
