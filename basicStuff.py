@@ -2,14 +2,15 @@
 # anything inside curly brackets is runtime
 name = "Carlos"
 # print(f"Hello {name}!") # works, but no idea on why it outputs invalid syntax
+print(name)
 
 arr = ['a', 'b', 'b']
 len(arr) # returns length of arr
 
 # Loops --------------------------------
-# colors = ['yellow', 'blue', 'yellow']
-# for color in colors:
-#     print(color, len(color))
+colors = ['yellow', 'blue', 'yellow']
+for color in colors:
+    print(color, len(color))
 
 
 # more familiar ?
