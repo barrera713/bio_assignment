@@ -4,6 +4,17 @@
 # input then the program will compute the fraction of nucleotides in 
 # both sequences that are shared.
 
+# Test 1
+# GCGTTAGCTAAAGCC
+# CCGTAAGCTATACCG        
+
+# Test 2
+# AGCCGCGCTA
+# UGcCTCGCug
+
+# Test 3
+# TATAT
+# UAUAT
 
 
 # Validate the length of sequences
@@ -17,17 +28,6 @@ def validateSeq(s):
             return False 
     return True # Returning True will indicate that there were no validation errors
 
-# Test 1
-# GCGTTAGCTAAAGCC
-# CCGTAAGCTATACCG        
-
-# Test 2
-# AGCCGCGCTA
-# UGcCTCGCug
-
-# Test 3
-# TATAT
-# UAUAT
 
 # ---------- Main Program ------------
 finish = 's'
@@ -36,7 +36,6 @@ while(finish != 'e'):
     s1 = str.upper(input("Input the nucleotide sequence 1. ").strip())
     s2 = str.upper(input("Input the nucleotide sequence 2. ").strip())
 
-    print('in here', s1)
 
     # Validate the lengths of both sequences
     if(len(s1) != len(s2)): 
