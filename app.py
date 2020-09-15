@@ -13,7 +13,7 @@
 # @return {Boolean}
 def validateSeq(s):
     for i in range(len(s)):
-        if(s[i].upper() != 'A' and s[i].upper() != 'G' and s[i].upper() != 'C' and s[i].upper() != 'T' and s[i].upper() != 'U'):
+        if(s[i] != 'A' and s[i] != 'G' and s[i] != 'C' and s[i] != 'T' and s[i] != 'U'):
             return False 
     return True # Returning True will indicate that there were no validation errors
 
@@ -33,8 +33,10 @@ def validateSeq(s):
 finish = 's'
 while(finish != 'e'):
     # strip() to remove spaces
-    s1 = input("Input the nucleotide sequence 1. ").strip()
-    s2 = input("Input the nucleotide sequence 2. ").strip()
+    s1 = str.upper(input("Input the nucleotide sequence 1. ").strip())
+    s2 = str.upper(input("Input the nucleotide sequence 2. ").strip())
+
+    print('in here', s1)
 
     # Validate the lengths of both sequences
     if(len(s1) != len(s2)): 
@@ -52,12 +54,12 @@ while(finish != 'e'):
         for i in range(len(s1)): 
             # If nucleotides match in the same position of their sequence
             # Increment shared 
-            if(s1[i].upper() == s2[i].upper()):
+            if(s1[i] == s2[i]):
                 shared += 1
 
             # In addition, we also want to increment if U and T
             # share their position in their sequence
-            elif (s1[i].upper() == "T" and s2[i].upper() == "U" or s1[i].upper() == "U" and s2[i].upper() == "T"):
+            elif (s1[i] == "T" and s2[i] == "U" or s1[i] == "U" and s2[i] == "T"):
                 shared += 1
 
         # We divide the total amount of shared nucleotides
