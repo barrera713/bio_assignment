@@ -9,6 +9,8 @@
 # Validate the length of sequences
 # A G C T U
 # --------- validate the sequence  --------- 
+# @param {String}
+# @return {Boolean}
 def validateSeq(s):
     for i in range(len(s)):
         if(s[i].upper() != 'A' and s[i].upper() != 'G' and s[i].upper() != 'C' and s[i].upper() != 'T' and s[i].upper() != 'U'):
